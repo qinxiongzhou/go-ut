@@ -34,8 +34,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'go test -coverprofile=c.out'
-                sh 'go tool cover -html=c.out -o coverage.html'
+                sh 'cd src;go test -coverprofile=../target/c.out;go tool cover -html=../target/c.out -o ../target/coverage.html;'
             }
         }
     }
@@ -43,3 +42,7 @@ pipeline {
 
 ```
 参考代码：[Jenkinsfile](/Jenkinsfile)
+
+### 运行结果
+
+![/images/jenkins-pipeline1.png](/images/jenkins-pipeline1.png)
