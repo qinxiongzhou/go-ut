@@ -7,8 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '
-                cd src;
+                sh 'cd src;
                 go test -coverprofile=../target/c.out;
                 o tool cover -html=../target/c.out -o ../target/coverage.html;
                 '
