@@ -32,7 +32,7 @@ pipeline {
         }
     }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
                 sh 'cd src;go test -coverprofile=../target/c.out;go tool cover -html=../target/c.out -o ../target/coverage.html;'
             }
