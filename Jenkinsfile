@@ -7,8 +7,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'go test -coverprofile=c.out'
-                sh 'go tool cover -html=c.out -o coverage.html'
+                sh 'cd src'
+                sh 'go test -coverprofile=../target/c.out'
+                sh 'go tool cover -html=../target/c.out -o ../target/coverage.html'
             }
         }
     }

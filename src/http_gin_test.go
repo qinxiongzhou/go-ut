@@ -1,4 +1,4 @@
-package http_gin_main
+package src
 
 import (
 	"testing"
