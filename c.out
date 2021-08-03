@@ -1,0 +1,5 @@
+mode: set
+http_gin_demo/http_gin.go:7.32,9.38 2 1
+http_gin_demo/http_gin.go:15.2,15.10 1 1
+http_gin_demo/http_gin.go:9.38,14.3 1 1
+http_gin_demo/http_gin.go:18.13,25.2 3 0
