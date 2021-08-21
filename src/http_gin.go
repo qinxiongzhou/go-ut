@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"strconv"
 )
 
 func setupRouter() *gin.Engine {
@@ -12,7 +13,20 @@ func setupRouter() *gin.Engine {
 			"message": "pong",
 		})
 	})
+	r.GET("/square", func(c *gin.Context) {
+		num,_:= strconv.Atoi(c.Query("num"))
+		result := Square(num)
+		c.JSON(200,gin.H{
+			"result":result,
+		})
+	})
 	return r
+}
+
+//计算平方
+func Square(num int) int{
+	result := num * num
+	return result
 }
 
 func main() {
